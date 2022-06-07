@@ -74,7 +74,7 @@ async def start(bot, message):
 async def start(bot, message):
     await bot.send_message(message.chat.id,
                            reply_to_message_id=message.id,
-                           text=f"Hello **{message.chat.first_name}!**\nI'm **Narayana Sudent Information Spoiler Bot**\nI'll Get Information of Naryana Students Using Admission Number\nTo Get Information Use /info\nFor More Use /help\nI'm Created By [Seshu Sai](https://www.instagram.com/_yarra.s.s_/)",
+                           text=f"Hello **{message.chat.first_name}!**\nI'm **Narayana Sudent Information Spoiler Bot**\nI'll Get Information of Narayana Student Using Admission Number\nTo Get Information Use /info\nFor More Use /help\nI'm Created By [Seshu Sai](https://www.instagram.com/_yarra.s.s_/)",
                            reply_markup=InlineKeyboardMarkup(
                                [
                                    [
@@ -92,7 +92,7 @@ async def start(bot, message):
 async def start(bot, message):
     await bot.send_message(message.chat.id,
                            reply_to_message_id=message.id,
-                           text=f"Hello **{message.chat.first_name}!**\nI'll Get Information of Naryana Students Using Admission Number\nTo Get Information Use /info\n Your Admission Number Must Me 7 Digits And Number\nI'm Created By [Seshu Sai](https://www.instagram.com/_yarra.s.s_/)",
+                           text=f"Hello **{message.chat.first_name}!**\nI'll Get Information of Narayana Student Using Admission Number\nTo Get Information Use /info\n Your Admission Number Must Me 7 Digits And Number\nI'm Created By [Seshu Sai](https://www.instagram.com/_yarra.s.s_/)",
                            reply_markup=InlineKeyboardMarkup(
                                [
                                    [
