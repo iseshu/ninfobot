@@ -2,6 +2,7 @@ import os
 import requests
 import asyncio
 import discord
+from dotenv import load_dotenv
 from discord.ext import commands
 
 client = commands.Bot(command_prefix='!')
@@ -44,6 +45,6 @@ async def on_message(message):
     elif message.content.startswith('!help'):
         await message.channel.send("I'll Get Information of Narayana Student Using Admission Number\nTo Get Information Use /info\n Your Admission Number Must Me 7 Digits And Number\nI'm Created By [Seshu Sai](https://www.instagram.com/_yarra.s.s_/)")
 
-TOKEN = "OTgzNzEzNTc1NDkzMzI0ODAx.G2zBry.YnxxzzBCILu2s6TkQ97AcP1zIBq93qiCQKcHiQ"
-
+TOKEN = os.getenv('TOKEN')
+load_dotenv()
 client.run(TOKEN)
