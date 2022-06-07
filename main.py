@@ -44,6 +44,6 @@ async def on_message(message):
     elif message.content.startswith('!help'):
         await message.channel.send("I'll Get Information of Narayana Student Using Admission Number\nTo Get Information Use /info\n Your Admission Number Must Me 7 Digits And Number\nI'm Created By [Seshu Sai](https://www.instagram.com/_yarra.s.s_/)")
 
-TOKEN = os.environ.get('BOT_TOKEN')
+TOKEN = "OTgzNzEzNTc1NDkzMzI0ODAx.G2zBry.YnxxzzBCILu2s6TkQ97AcP1zIBq93qiCQKcHiQ"
 
 client.run(TOKEN)
