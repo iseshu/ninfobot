@@ -2,7 +2,7 @@ import os
 import requests
 from pyromod import listen
 from requests.structures import CaseInsensitiveDict
-from pyrogram import filters, Client
+from pyrogram import filters, Client,enums
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import *
 from pyrogram.errors import (
@@ -29,7 +29,7 @@ bot = Client('bot',
 async def start(bot, message):
     i_d = await bot.ask(
         message.chat.id,
-        f"Hello **{message.chat.first_name}!**\n ||spoiler||"
+        f"Hello **{message.chat.first_name}!**\n"
         "Send The Narayana Admission Number (NAN) of the student you want to get information about.\n",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -50,9 +50,9 @@ async def start(bot, message):
         if req.status_code == 200:
             data = req.json()
             if data["status"] == True:
-                text = f"|--**Here The Details Of {id}**--\n|->🙍**Name**: `{data['name']}`\n|->🧍**Father Name**: `{data['father_name']}`\n|->🔢**Admin No**: `{data['id_no']}`\n|->🧑‍🏫**Class**: `{data['class_n']}`\n|->🏦**Branch**: `{data['branch']}`\n|->💰**Due Amount**: `{data['due_amount']}`\n|->☎️**Mobile Number**: ||{data['mobile']}||\n|(Created By [Seshu Sai](https://www.instagram.com/_yarra.s.s_/))"
+                text = f"|--**Here The Details Of {id}**--\n|->🙍**Name**: `{data['name']}`\n|->🧍**Father Name**: `{data['father_name']}`\n|->🔢**Admin No**: `{data['id_no']}`\n|->🧑‍🏫**Class**: `{data['class_n']}`\n|->🏦**Branch**: `{data['branch']}`\n|->💰**Due Amount**: `{data['due_amount']}`\n|->☎️**Mobile Number**: || `{data['mobile']}` ||\n|(Created By [Seshu Sai](https://www.instagram.com/_yarra.s.s_/))"
                 await msg.delete()
-                await bot.send_message(message.chat.id, text, reply_to_message_id=i_d.id, protect_content=True,
+                await bot.send_message(message.chat.id, text, reply_to_message_id=i_d.id, protect_content=True,parse_mode=enums.ParseMode.MARKDOWN,
                                        reply_markup=InlineKeyboardMarkup(
                                            [
                                                [
