@@ -29,7 +29,7 @@ bot = Client('bot',
 async def start(bot, message):
     i_d = await bot.ask(
         message.chat.id,
-        f"Hello **{message.chat.first_name}!**\n"
+        f"Hello **{message.chat.first_name}!**\n ||spoiler||"
         "Send The Narayana Admission Number (NAN) of the student you want to get information about.\n",
         reply_markup=InlineKeyboardMarkup(
             [
