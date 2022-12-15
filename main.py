@@ -46,7 +46,7 @@ async def start(bot, message):
     if len(id) == 7:
         msg = await bot.send_message(message.chat.id, "🔎 Getting `{}` Information ".format(i_d.text))
         req = requests.get(
-            "https://npayapi-in.herokuapp.com/get?id={}".format(id))
+            "https://npayapi.iseshu.repl.co/get?id={}".format(id))
         if req.status_code == 200:
             data = req.json()
             if data["status"] == True:
